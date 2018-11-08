@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href=""> -->
+    <title>Gas Consumption</title>
+    <link rel="shortcut icon" type="image/x-icon" href="ML-WEB.png" />
+  
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!--    Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Julius+Sans+One" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+    </style>
+    <!-- JavaScript -->
+    <script>
+    function calculate(){
+        var gasConsumption = document.getElementById("consumption").value;
+
+        var mileagePerYear = document.getElementById("mileage").value;
+
+        if(gasConsumption == 0) {
+            document.getElementById("result").innerHTML = "Opps..you forgot to enter how much gas your car guzzels.";
+        }
+        else{
+            var subtotal = mileagePerYear/100*gasConsumption;
+            document.getElementById("result").innerHTML = "It costs you CAD$"+ subtotal + " in gas every year!";
+
+        }
+    }
+    </script>
+</head>
+<body>
+<!-- hero image -->
+<div class="bg-image"></div>
+<!-- Jumbotron -->
+<div class="bg-text">
+  <h1>Gas Calculator</h1>
+  <div id="data-entry">
+        <h2>Do you know how much money you spend on gas each year?</h2>
+        <h2>Want to find out?</h2>
+        <p>Just answer 2 questions:</p>
+        <label>1. How much gas does it take to travel 100km?</label><br/>
+  <input type="text" id="consumption"><br/>
+  <br/>
+  <label> 2. How many KMs per year do you drive?</label><br/>
+  <input type="range" min="1000" max="50000" id="mileage"><br/><br/>
+  <input type="button" onclick="calculate();" value="calculate">
+  </div><br/><br/>
+  <div id="result"></div>
+</div>
+
+<section class="thanks">
+     <p>Thanks for the help <a href="https://www.linkedin.com/company/demiks/" target="_blank">Hamid Darabi</a>. 
+        <!-- <img src="./JSinclass.png" alt="in class" title="How this looked in before CSS was added" class="img-thumbnail"> -->
+        This was the project done in a 2 hr class 'Learn JavaScript programming for beginners. I added some CSS because I just can't stop myself! <i class="far fa-smile"></i></p>
+</section>
+    
+<!--    Footer starts-->
+<div class="footer">
+        <nav class="navbar fixed-bottom navbar-light bg-light justify-content-center">      
+                <a class="navbar-brand" href="http://mmldesigns.netlify.com" title="Click for more info.">
+                    &nbsp; &nbsp;<img src="Ml-WEB.png" width="40" height="30" class="d-inline-block align-top" alt="logo"></a> &nbsp; &nbsp;
+                <h6>&copy;&nbsp; Michelle M Lefebvre | MML Designs | All Rights Reserved 2018 </h6>
+        </nav>
+</div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+        (function() {
+            'use strict'
+
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement('style')
+                msViewportStyle.appendChild(
+                    document.createTextNode(
+                        '@-ms-viewport{width:auto!important}'
+                    )
+                )
+                document.head.appendChild(msViewportStyle)
+            }
+
+        }())
+    </script>
+
+</body>
+</html>
